@@ -105,4 +105,11 @@ Client.defaultUserSchema
 			.add(FarmingPatchTypes.Flower, 'any', { default: null })
 			.add(FarmingPatchTypes.Mushroom, 'any', { default: null })
 			.add(FarmingPatchTypes.Belladonna, 'any', { default: null })
+	)
+	.add('pizazz', folder =>
+		folder
+			.add('telekinetic_points', 'integer', { default: 0 })
+			.add('alchemist_points', 'integer', { default: 0 })
+			.add('enchantment_points', 'integer', { default: 0 })
+			.add('graveyard_points', 'integer', { default: 0 })
 	);

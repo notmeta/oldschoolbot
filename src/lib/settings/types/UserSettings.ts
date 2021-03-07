@@ -43,6 +43,13 @@ export namespace UserSettings {
 	export const ZealTokens = T<number>('zeal_tokens');
 	export const OpenableScores = T<O.Readonly<ItemBank>>('openable_scores');
 
+	export namespace PizazzPoints {
+		export const Telekinetic = T<number>('pizazz.telekinetic_points');
+		export const Alchemist = T<number>('pizazz.alchemist_points');
+		export const Enchantment = T<number>('pizazz.enchantment_points');
+		export const Graveyard = T<number>('pizazz.graveyard_points');
+	}
+
 	export namespace Stats {
 		export const Deaths = T<number>('stats.deaths');
 
