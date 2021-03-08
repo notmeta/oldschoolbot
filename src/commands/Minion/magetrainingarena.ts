@@ -241,7 +241,10 @@ export default class extends BotCommand {
 		});
 	}
 
-	async buy(msg: KlasaMessage, [quantity = 1, input]: [null | number, string]) {
+	async buy(
+		msg: KlasaMessage,
+		[quantity = 1, input = '']: [undefined | string | number, string]
+	) {
 		if (typeof quantity === 'string') {
 			input = quantity;
 			quantity = 1;
