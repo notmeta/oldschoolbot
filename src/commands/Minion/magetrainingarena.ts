@@ -315,7 +315,7 @@ export default class extends BotCommand {
 	}
 
 	async points(msg: KlasaMessage) {
-		let str = `${Emoji.Magic} ${msg.author.minionName}'s **Pizazz points**:\n`;
+		let str = `${Emoji.Magic}${msg.author.minionName}'s Pizazz points:\n`;
 		str += `**Telekinetic:** ${msg.author.settings.get(
 			UserSettings.PizazzPoints.Telekinetic
 		)}\n`;
