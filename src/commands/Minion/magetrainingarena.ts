@@ -309,6 +309,16 @@ export default class extends BotCommand {
 			UserSettings.PizazzPoints.Graveyard,
 			graveyardBal - graveyardPrice
 		);
+
+		if (item.item === getOSItem('Bones to Peaches')) {
+			if (!msg.author.settings.get(UserSettings.UnlockedBonesToPeaches)) {
+				await msg.author.settings.update(UserSettings.UnlockedBonesToPeaches, true);
+				return msg.channel.send(
+					`${Emoji.Magic}${msg.author.minionName} has unlocked the Bones to Peaches spell!`
+				);
+			}
+			return msg.channel.send(`${msg.author.minionName} already knows this spell!`);
+		}
 		await msg.author.addItemsToBank({ [item.item.id]: quantity }, true);
 
 		return msg.channel.send(`Added ${quantity}x ${item.item.name} to your bank.`);

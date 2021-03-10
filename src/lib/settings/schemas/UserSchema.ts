@@ -31,6 +31,7 @@ Client.defaultUserSchema
 	.add('carpenter_points', 'integer', { default: 0 })
 	.add('zeal_tokens', 'integer', { default: 0 })
 	.add('openable_scores', 'any', { default: {} })
+	.add('unlocked_bones_to_peaches', 'boolean', { default: false })
 	.add('minion', folder =>
 		folder
 			.add('name', 'string')

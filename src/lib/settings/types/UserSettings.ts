@@ -42,6 +42,7 @@ export namespace UserSettings {
 	export const CarpenterPoints = T<number>('carpenter_points');
 	export const ZealTokens = T<number>('zeal_tokens');
 	export const OpenableScores = T<O.Readonly<ItemBank>>('openable_scores');
+	export const UnlockedBonesToPeaches = T<boolean>('unlocked_bones_to_peaches');
 
 	export namespace PizazzPoints {
 		export const Telekinetic = T<number>('pizazz.telekinetic_points');
